@@ -3,9 +3,15 @@
 // Return an array of numbers in 1..10
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
+console.log(numbers);
 export function getFirstTenNumbers() {
-  // Your code goes here...
-
+  let numbers = []
+  let a = 0; 
+  for (let i = 0; i < 10; i++){
+    a = a + 1
+    numbers.push(a);
+  };
+  return numbers;
 }
 
 // === TEST YOURSELF ===
