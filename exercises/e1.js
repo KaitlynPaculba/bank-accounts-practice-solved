@@ -3,7 +3,6 @@
 // Return an array of numbers in 1..10
 // getFirstTenNumbers() => [1, 2, 3, ... , 10]
 
-console.log(numbers);
 export function getFirstTenNumbers() {
   let numbers = []
   let a = 0; 

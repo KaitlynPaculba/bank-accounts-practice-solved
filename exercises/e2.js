@@ -1,10 +1,32 @@
 // EXERCISE 2
 // for every number between 0 and max find all numbers that have square roots that are integers
+
+
+
+
+
 // getNumbersWithSquareRoots(17) => [0, 1, 4, 9, 16]
 
-export function getNumbersWithSquareRoots(max) {
-  // Your code goes here...
 
+ 
+//  console.log(tRoots);
+export function getNumbersWithSquareRoots(max) {
+ const nums = [];
+  const roots = [];
+  const tRoots = [];
+  const fRoots = [];
+  for (let i = 0; i < max; i++) {
+    nums.push(i);
+  };
+  for (let i = 0; i < max; i++) {
+    let sum = nums[i] * nums[i];
+    roots.push(sum);
+  };
+  for (let values of roots) {
+    let sum = values < max;
+    const flip = sum ? tRoots.push(values) : fRoots.push(values);
+  };
+  return tRoots;
 }
 
 // === TEST YOURSELF ===
