@@ -3,10 +3,15 @@
 // Please, read the exercise-info/reverse.md to get the initial data of what is the expected result of this exercise.
 // reverseArray([1, 2, 3 ,4]) => [4, 3, 2, 1]
 // NOTE: You can NOT use the array.reverse() method in your code
+// const array = [1, 2, 3, 4];
 
+// console.log(reverse);
 export function reverseArray(array) {
-  // Your code goes here...
-
+  const reverse = [];
+for (let a = array.length; a > 0; a--) {;  
+    reverse.push(array[a - 1]);
+  };
+  return reverse;
 }
 
 

@@ -4,10 +4,21 @@
 // doesArrayInclude(['a', 'b', 'c'], 'a') => true
 // doesArrayInclude(['a', 'b', 'c'], 'f') => false
 // NOTE: You can NOT use the array.includes() method in your code
+// const array = ['c', 'd', 'f', 'h', 'i', 'z', 'v'];
+// const value = 'v';
+
+//   console.log(flip)
 
 export function doesArrayInclude(array, value) {
-  // Your code goes here...
-
+  let tOrF = true;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === value) {
+      tOrF = true;
+    } else {
+      tOrF = false;
+    }
+  }
+  return tOrF;
 }
 
 

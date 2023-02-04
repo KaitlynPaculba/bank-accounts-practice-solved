@@ -2,10 +2,23 @@
 // Return an array of account holders names that contains a given letter
 // Array example: bankAccounts in /data/data.js
 // getClientsWithLetterInName(bankAccounts, 'e') => ['Kevin', 'Steven', ...]
-
+ 
 export function getClientsWithLetterInName(array, letter) {
-  // Your code goes here...
-
+  const found = [];
+  const names = [];
+  const letUp = letter.toUpperCase();
+  const letLow = letter.toLowerCase();
+  for (let i = 0; i < array.length; i++) {
+      names.push(array[i].name);
+    };
+  for (let i = 0; i < array.length; i++) {
+    if (names[i].indexOf(letter) !== -1 ||
+        names[i].indexOf(letUp) !== -1 ||
+        names[i].indexOf(letLow) !== -1) {
+      found.push(names[i]);
+    };
+};
+  return found;
 }
 
 // === TEST YOURSELF ===

@@ -5,8 +5,22 @@
 // getAllDepositsGreaterThanOneHundred(bankAccounts) => [3432, 43242.34, 23432]
 
 export function getAllDepositsGreaterThanOneHundred(array) {
-  // Your code goes here...
-
+  const deposits = []
+  const undefinedStuff = [];
+  const depositsUp = [];
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    let wilth = array[i].deposits !== undefined;
+  const unFlip = wilth ? deposits.push(array[i].deposits) : undefinedStuff.push(array[i].deposits);
+  };
+  
+  for (let i = 0; i < deposits.length; i++) {
+    for (let a = 0; a < deposits[i].length; a++) {
+      let diff = deposits[i][a] > 100;
+      const inFlip = diff ? depositsUp.push(deposits[i][a]): undefinedStuff.push(deposits[i][a]);
+    }
+  }
+  return depositsUp;
 }
 
 
